@@ -73,7 +73,7 @@ def run(path, output_path, include_tags):
 
 if __name__ == "__main__":
     run(
-        path="~/Downloads/jd/com.apple.Notes/Data/Library/Notes/NotesV7.storedata",
+        path="~/Library/Containers/com.apple.Notes/Data/Library/Notes/*.storedata",
         output_path="./fx_export/",
         include_tags=True,
     )
