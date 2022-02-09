@@ -9,3 +9,5 @@ Python tool to export Apple Notes database entries to markdown files
 - Selecting _non-deleted_ folders : `select Z_PK, ZTITLE2 from ZICCLOUDSYNCINGOBJECT where (ZMARKEDFORDELETION=0 and ZNEEDSINITIALFETCHFROMCLOUD=0 and length(ZTITLE2)>=1)`
 - Selecting all _non-deleted_ notes from a given folder_z_pk : `select Z_PK, ZTITLE1 from ZICCLOUDSYNCINGOBJECT where (ZMARKEDFORDELETION=0 and ZNEEDSINITIALFETCHFROMCLOUD=0 and ZFOLDER=%folder_z_pk%)`
 - Timestamps seem to be : `ZCREATIONDATE3, ZMODIFICATIONDATE1`
+- Note data is in `ZICNOTEDATA` table, gzipped blob in `ZDATA` field.
+  - But, absent of any understandable markup, so I'm unable to extract it in any worthwhile way.
